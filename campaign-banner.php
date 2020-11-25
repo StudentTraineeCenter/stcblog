@@ -6,6 +6,17 @@
  * @license GPL(GPLv3)
  */
 ?>
-<div class="campaign-banner" style="display: none;">
-    <p>Spustili jsme registraci do nového ročníku Microsoft STC! Registruj se do <date id="campaign-date">3. 11. 2020</date> na <a href="aka.ms/STC2021">aka.ms/STC2021</a>.</p>
-</div>
+<?php
+
+date_default_timezone_set('Europe/Prague');
+
+$endDate = strtotime("November 13 2020");
+$diff = ceil($endDate-time());
+
+
+if($diff > 0) {
+    echo '
+    <div class="campaign-banner">
+        <p>Spustili jsme registraci do nového ročníku Microsoft STC! Registruj se do <date id="campaign-date">3. 11. 2020</date> na <a href="aka.ms/STC2021">aka.ms/STC2021</a>.</p>
+    </div>';
+}
