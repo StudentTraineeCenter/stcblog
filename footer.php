@@ -30,14 +30,15 @@
         <?php endif; ?>
     </section>
 </footer>
+<?php include 'cookies-banner.php';?>
 <?php include 'cookies-notice.php';?>
 <canvas id="canvas"></canvas>
 <?php wp_footer(); ?>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/jquery.min.js"></script>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/canvas.js"></script>
-<script src="<?php echo get_bloginfo('template_directory') . get_js_name();?>"></script>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/cookies-enabler.min.js"></script>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/cookies-setting.js"></script>
+<script src="<?php echo get_bloginfo('template_directory') . get_js_name();?>"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154876830-1"></script>
 <script type="text/plain" class="ce-script">

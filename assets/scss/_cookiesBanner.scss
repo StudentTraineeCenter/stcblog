@@ -54,6 +54,15 @@
   padding: 2rem;
   height: 70vh;
 
+  button {
+    text-transform: uppercase;
+    color: var(--black);
+    background-color: var(--white);
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+
   @include ms-motion-fadeIn;
 
   #cookies-setting-close {
@@ -107,4 +116,10 @@
       }
     }
   }
+}
+.cookies-active {
+  display: block;
+}
+.cookies-deactive {
+  display: none;
 }

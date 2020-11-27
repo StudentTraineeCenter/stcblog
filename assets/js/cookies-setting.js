@@ -26,12 +26,18 @@ COOKIES_ENABLER.init({
     iframesPlaceholder: false,
     iframesPlaceholderHTML:
         '<p>To view this content you need to'
-            +'<a href="#" class="ce-accept">Enable Cookies</a>'
-        +'</p>',
+        + '<a href="#" class="ce-accept">Enable Cookies</a>'
+        + '</p>',
     iframesPlaceholderClass: 'ce-iframe-placeholder',
 
     // Callbacks
-    onEnable: '',
-    onDismiss: '',
-    onDisable: ''
-    });
+    onEnable: function () {
+        console.log('cookies have been enabled');
+    },
+    onDismiss: function () {
+        console.log('the banner has been dismissed');
+    },
+    onDisable: function () {
+        console.log('cookies have been disabled');
+    }
+});
