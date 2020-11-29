@@ -101,6 +101,9 @@
     &__no-needed {
       margin-top: 3rem;
     }
+    button {
+      background: var(--neutralQuaternaryAlt);
+    }
   }
 
   @include for-size("tablet") {

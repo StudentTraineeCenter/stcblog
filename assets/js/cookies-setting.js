@@ -20,7 +20,7 @@ COOKIES_ENABLER.init({
     clickOutside: false,
 
     cookieName: 'ce-cookie',
-    cookieDuration: '365',
+    cookieDuration: '14',
     wildcardDomain: false,
 
     iframesPlaceholder: false,
