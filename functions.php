@@ -2,7 +2,7 @@
 
 /**
  * Special PHP functions.
- * @copyright Copyright (C) 2020 Ondrej Golasowski, Petr Kucera and contributors
+ * @copyright Copyright (C) 2020 Ondrej Golasowski, Petr Kucera, Matyas Koc and contributors
  * @license GPL(GPLv3)
  */
 
@@ -274,7 +274,7 @@ if ( function_exists( 'coauthors_posts_links' ) ) {
 }
 
 /**
- * Desible admin bar on website, becouse cashing
+ * Desible admin bar on website, because of caching
  * @author Petr Kucera, Matyas Koc
  */
 show_admin_bar(false);
@@ -292,5 +292,25 @@ if(is_user_logged_in()==false){
     remove_action('wp_head', 'rest_output_link_wp_head', 10);
 
 }
+
+/**
+ * Add more allowed mime types
+ * DO NOT CHANGE WITHOUT APPROVAL
+ * @author Matyas Koc
+ */
+function additional_mime($mime_types) {
+  $mime_types['mcworld'] = 'application/zip';
+  return $mime_types;
+}
+
+add_filter( 'upload_mimes', 'additional_mime', 1, 1 );
+
+/**
+ * Remove footer in admin-portal
+ * @author Matyas Koc
+ */
+add_filter( 'admin_footer_text', '__return_empty_string', 11 ); 
+add_filter( 'update_footer', '__return_empty_string', 11 );
+add_filter('admin_footer_text', '__return_empty_string');
 
 ?>
