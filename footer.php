@@ -77,7 +77,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 /></noscript>
 <!-- End Facebook Pixel Code -->
 <!-- Microsoft Clarity -->
-<script type="text/javascript">
+<script type="text/plain" class="ce-script">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
