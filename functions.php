@@ -300,6 +300,7 @@ if(is_user_logged_in()==false){
  */
 function additional_mime($mime_types) {
   $mime_types['mcworld'] = 'application/zip';
+  $mime_types['zip'] = 'application/zip';
   return $mime_types;
 }
 
