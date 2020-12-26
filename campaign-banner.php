@@ -1,12 +1,9 @@
 <?php
-
 /**
  * Header.
  * @copyright Copyright (C) 2020 Irena Andraskova, Petr Kucera
  * @license GPL(GPLv3)
  */
-?>
-<?php
 
 date_default_timezone_set('Europe/Prague');
 

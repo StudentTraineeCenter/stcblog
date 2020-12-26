@@ -18,7 +18,7 @@
         <?php endif; ?>
     </section>
     <section class="footer__socials">
-        <a style="display: none;" href="<?php echo esc_url( home_url( '/stc.php' ) ); ?>">tv</a>
+        <a style="display:none" href="https://studuj.digital/stc.php">About STC</a>
         <?php if(esc_url(get_theme_mod('settings_footer_logo1')) != "") :  ?>
             <a class="footer__socials__icon" href=<?php echo esc_url(get_theme_mod('settings_footer_link1'))?>><img src=<?php echo esc_url(get_theme_mod('settings_footer_logo1'))?> alt=""/></a>
         <?php endif; ?>
@@ -39,7 +39,6 @@
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/cookies-enabler.min.js"></script>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/cookies-setting.js"></script>
 <script src="<?php echo get_bloginfo('template_directory') . get_js_name();?>"></script>
-<?php if(is_user_logged_in()!==true){ ?>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-154876830-1"></script>
 <script type="text/plain" class="ce-script">
@@ -86,4 +85,3 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     })(window, document, "clarity", "script", "4blm2hsbtx");
 </script>
 <!-- End Microsoft Clarity -->
-<?php } ?>

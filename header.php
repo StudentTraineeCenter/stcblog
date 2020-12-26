@@ -21,6 +21,5 @@
     </section>
     <nav class="header__nav" id="section_menu">
         <?php wp_nav_menu(); ?>
-        <!-- <a href="https://studuj.digital/stc.php">tv</a>-->
     </nav>
 </header>
