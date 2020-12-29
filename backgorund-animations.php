@@ -7,14 +7,14 @@
 ?>
 
 <!-- tato animace by se mela vypnout, kdyz je silvestr -->
-<canvas id="canvas"></canvas>
+<!-- <canvas id="canvas"></canvas> -->
 
 <!-- tato animace by se mela zapnout, kdyz je silvestr -->
 <?php
 
 date_default_timezone_set('Europe/Prague');
 
-$endDate = strtotime("January 1 2021");
+$endDate = strtotime("January 1 2021 4AM");
 $diff = ceil($endDate-time());
 
 if($diff > 0) {
@@ -31,17 +31,29 @@ if($diff > 0) {
 ?>
 
 <style>
-body {
+/* body {
     background-color: black;
-}
+} */
 
 #container {
   margin: 0 auto;
-  border: 1px solid white;
   width: 100%;
-  height: 30vw;
+  height: 90vh;
+  position: fixed;
+  bottom: 0;
+  z-index: -50;
+  border: none;
 }
+
+@media (prefers-reduced-motion) {
+  #container {
+    display: none;
+  } 
+}
+
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/fireworks-canvas@2.5.0/fireworks.js"> </script> 
 
 <script>
 function ffxinit(Fireworks, container) {
@@ -56,6 +68,6 @@ function ffxinit(Fireworks, container) {
     if (document.hasFocus()) nowWorks.fire();
   }, 300);
 }
-
-ffxinit(Fireworks, document.querySelector("#container"));
+console.log("Pepa je pípa a Filip zase Fífa");
+ffxinit(Fireworks, document.getElementById("container"));
 </script>
