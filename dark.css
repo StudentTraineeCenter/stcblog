@@ -1,5 +1,14 @@
 :root {
     --black: #ffffff;
-    --white: #323130;
-    --neutralLight: #202020;
-  }
+    --white: #292827;
+    --neutralLight: #201f1e;
+    --themeDarker: #ffffff;
+}
+
+a {
+    color: var(--black) !important;
+}
+
+span.current {
+    color: var(--black) !important;
+}
