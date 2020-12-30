@@ -24,6 +24,6 @@
     </nav>
     <dark-mode-toggle
       id="dark-mode-toggle"
-      appearance="switch"
+      appearance="toggle"
   ></dark-mode-toggle>
 </header>

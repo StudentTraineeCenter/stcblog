@@ -35,6 +35,10 @@
 <canvas id="canvas"></canvas>
 <?php wp_footer(); ?>
 <script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
+<script>
+// Remember the user's last color scheme choice
+darkModeToggle.setAttribute('permanent', '');
+</script>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/jquery.min.js"></script>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/canvas.js"></script>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/cookies-enabler.min.js"></script>
