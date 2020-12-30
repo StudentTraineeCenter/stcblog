@@ -22,4 +22,8 @@
     <nav class="header__nav" id="section_menu">
         <?php wp_nav_menu(); ?>
     </nav>
+    <dark-mode-toggle
+      id="dark-mode-toggle"
+      appearance="switch"
+  ></dark-mode-toggle>
 </header>

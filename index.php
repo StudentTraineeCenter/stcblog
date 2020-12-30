@@ -8,6 +8,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory') . "/light.css";?>" media="(prefers-color-scheme: light)"/>
+        <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory') . "/dark.css";?>" media="(prefers-color-scheme: dark)"/>
         <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory') . get_css_name();?>"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
         <meta charset="<?php bloginfo( 'charset' ); ?>">

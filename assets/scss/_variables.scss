@@ -15,7 +15,6 @@
   --themeDarker: #004377;
   --neutralLighterAlt: #f8f8f8;
   --neutralLighter: #f4f4f4;
-  --neutralLight: #eaeaea;
   --neutralQuaternaryAlt: #dadada;
   --neutralQuaternary: #d0d0d0;
   --neutralTertiaryAlt: #c8c8c8;
@@ -24,16 +23,7 @@
   --neutralPrimaryAlt: #8d8b8a;
   --neutralPrimary: #323130;
   --neutralDark: #605e5d;
-  --black: #494847;
-  --white: #ffffff;
   --cloud: #f4f4f4;
   --msftyellow: #fdb900;
   --campaign-banner-black: #0A0A0A;
-
-  // dark theme
-  @media (prefers-color-scheme: dark) {
-    //--black: #ffffff;
-    //--white: #323130;
-    //--neutralLight: #202020;
-  }
 }
