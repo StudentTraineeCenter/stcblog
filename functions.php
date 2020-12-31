@@ -143,7 +143,7 @@ function stcblog_customize_register($wp_customize){
         // ===================================
         // Adding the template setting.
         $wp_customize->add_setting('settings_footer_copyright', [
-            'default' => '© 2020 STC, Všechna práva vyhrazena'
+            'default' => '© '.date("Y").' STC, Všechna práva vyhrazena'
         ]);
 
         //Adding a control to the Customizer.
