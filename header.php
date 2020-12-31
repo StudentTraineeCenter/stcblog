@@ -25,5 +25,6 @@
     <dark-mode-toggle
       id="dark-mode-toggle"
       appearance="toggle"
+      permanent="true"
   ></dark-mode-toggle>
 </header>
