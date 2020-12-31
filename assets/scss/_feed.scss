@@ -8,6 +8,10 @@
     max-width: 1000px;
     margin-top: 2rem;
 
+    & article img {
+      background: white !important;
+    }
+
     .excerpt {
       color: inherit;
       text-decoration: none;
