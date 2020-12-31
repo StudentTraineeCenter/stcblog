@@ -11,7 +11,7 @@ date_default_timezone_set('Europe/Prague');
 $endDate = strtotime("January 1 2021 4AM");
 $diff = ceil($endDate - time());
 
-if ($diff < 43200) {
+if ($diff < 432000) {
   echo '
         <div id="container"></div>
     ';
@@ -60,6 +60,9 @@ if ($diff < 43200) {
     setInterval(() => {
       if (document.hasFocus()) nowWorks.fire();
     }, 300);
+
+    // Resize fireworks when client resizes browser tab
+    window.addEventListener('resize', () => nowWorks.resetSize())
   }
 
   ffxinit(Fireworks, document.getElementById("container"));
