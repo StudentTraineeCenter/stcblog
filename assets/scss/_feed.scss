@@ -1,5 +1,5 @@
 // = feed styles (index.php, category.php) =
-// Copyright (C) 2020 Ondrej Golasowski, Petr Kucera
+// Copyright (C) 2020 Ondrej Golasowski, Petr Kucera, Filip Tronicek
 // ===============================================
 
 .feed {
@@ -7,6 +7,10 @@
     width: 90vw;
     max-width: 1000px;
     margin-top: 2rem;
+
+    & article {
+      background: var(--white) !important;
+    }
 
     .excerpt {
       color: inherit;

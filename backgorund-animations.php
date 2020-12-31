@@ -60,6 +60,9 @@ if ($diff < 43200) {
     setInterval(() => {
       if (document.hasFocus()) nowWorks.fire();
     }, 300);
+
+    // Resize fireworks when client resizes browser tab
+    window.addEventListener('resize', () => nowWorks.resetSize())
   }
 
   ffxinit(Fireworks, document.getElementById("container"));
