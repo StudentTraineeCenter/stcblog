@@ -11,7 +11,7 @@ date_default_timezone_set('Europe/Prague');
 $endDate = strtotime("January 1 2021 4AM");
 $diff = ceil($endDate - time());
 
-if ($diff < 43200) {
+if ($diff > 43200) {
   echo '
         <div id="container"></div>
     ';
