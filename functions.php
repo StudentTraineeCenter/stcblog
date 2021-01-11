@@ -296,7 +296,7 @@ if(is_user_logged_in()==false){
 /**
  * Add more allowed mime types
  * DO NOT CHANGE WITHOUT APPROVAL
- * @author Matyas Koc
+ * @author Matyas Koc, Petr Kucera
  */
 function additional_mime($mime_types) {
   $mime_types['mcworld'] = 'application/zip';
@@ -311,7 +311,7 @@ function add_allow_upload_extension_exception( $types, $file, $filename, $mimes 
     $wp_filetype = wp_check_filetype( $filename, $mimes );
     $ext         = $wp_filetype['ext'];
     $type        = $wp_filetype['type'];
-    if( in_array( $ext, array( 'mcworld', 'zip' ) ) ) { // Overrident extensions
+    if( in_array( $ext, array( 'mcworld', 'zip', 'ppsx' ) ) ) { // Overrident extensions
         $types['ext'] = $ext;
         $types['type'] = $type;
     }
