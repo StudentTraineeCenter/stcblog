@@ -14,12 +14,7 @@ ports:
     onOpen: ignore
 
 tasks:
-  - init: gp await-port 3306 && \
-      wp-setup-theme && \
-      cd /workspace/stcblog/public_html && \
-      wp theme activate stcblog \
-      wp option set blogname studuj.digital && \
-      wp option set blogdescription "Články, novinky, tipy a triky z dílny studentů Microsoft STC o moderních technologiích. Studuj s námi digitálně!"
+  - init: gp await-port 3306 && wp-setup-theme && cd /workspace/stcblog/public_html && wp theme activate stcblog && wp option set blogname studuj.digital && wp option set blogdescription "Články, novinky, tipy a triky z dílny studentů Microsoft STC o moderních technologiích. Studuj s námi digitálně!"
     command: apache2ctl start # start Apache server
   
   # start MailHog (SMTP testing tool) 
