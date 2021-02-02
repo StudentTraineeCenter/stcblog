@@ -63,6 +63,5 @@ RUN go get github.com/mailhog/MailHog && \
     chmod +x $HOME/wp-cli.phar && \
     mv $HOME/wp-cli.phar /usr/local/bin/wp && \
     chown gitpod:gitpod /usr/local/bin/wp
-    wp theme activate stcblog
 
 USER gitpod
