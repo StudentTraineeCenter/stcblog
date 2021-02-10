@@ -18,15 +18,15 @@ tasks:
       gp await-port 3306 &&
       wp-setup-theme &&
       cd /workspace/stcblog/public_html &&
-      wp theme activate stcblog && 
-      wp option set blogname studuj.digital && 
-      wp option set blogdescription "Články, novinky, tipy a triky z dílny studentů Microsoft STC o moderních technologiích. Studuj s námi digitálně!" && 
-      wp post delete 1 && 
-      wget https://files.catbox.moe/9j500a.xml &&
+      wp theme activate stcblog &&
+      wp option set blogname studuj.digital &&
+      wp option set blogdescription "Články, novinky, tipy a triky z dílny studentů Microsoft STC o moderních technologiích. Studuj s námi digitálně!" &&
+      wp post delete 1 &&
+      wget https://shareefiles.blob.core.windows.net/files/9j500a.xml &&
       wget https://shareefiles.blob.core.windows.net/files/stockimg.zip &&
-      wp plugin install stockimg.zip --activate && 
-      wp plugin install wordpress-importer --activate && 
-      wp plugin install syntaxhighlighter --activate && 
+      wp plugin install stockimg.zip --activate &&
+      wp plugin install wordpress-importer --activate &&
+      wp plugin install syntaxhighlighter --activate &&
       wp import 9j500a.xml --authors=create
     command: apache2ctl start # start Apache server
   
