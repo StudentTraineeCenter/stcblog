@@ -36,7 +36,7 @@
                                 <div class="excerpt__text">
                                     <div class="excerpt__text__box">
                                         <?php if(is_sticky()){
-                                            echo ('<img class="excerpt__text__box__pinned" src="' . get_theme_file_uri( 'assets/img/pin.svg') . '"alt="pinned post"/>');
+                                            echo ('<img class="excerpt__text__box__pinned" src="' . get_theme_file_uri( 'assets/img/pin.svg') . '" alt="pinned post"/>');
                                         } ?>
                                     </div>
                                     <h2 class="excerpt__text__title"><?php the_title(); ?></h2>
