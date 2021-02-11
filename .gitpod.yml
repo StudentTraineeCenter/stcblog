@@ -23,8 +23,8 @@ tasks:
       wp option set blogdescription "Články, novinky, tipy a triky z dílny studentů Microsoft STC o moderních technologiích. Studuj s námi digitálně!" &&
       wp post delete 1 &&
       wget https://shareefiles.blob.core.windows.net/files/9j500a.xml &&
-      wget https://shareefiles.blob.core.windows.net/files/stockimg.zip &&
-      wp plugin install stockimg.zip --activate &&
+      wget https://github.com/filiptronicek/pixasplash-wordpress/releases/latest/download/pixasplash-wordpress.zip &&
+      wp plugin install pixasplash-wordpress.zip --activate &&
       wp plugin install wordpress-importer --activate &&
       wp plugin install syntaxhighlighter --activate &&
       wp import 9j500a.xml --authors=create
