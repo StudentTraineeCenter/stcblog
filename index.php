@@ -45,8 +45,8 @@
                                         <span class="excerpt__text__meta__date"><?php echo get_the_date(); ?></span>
                                         <span>•</span>
                                         <span class="excerpt__text__meta__readtime">Doba čtení: <?php echo reading_time(); ?></span>
-                                        <?php if(has_tag('vzorovahodina')==true){
-                                           echo("<span id='phone-hide'>•</span><span class='excerpt__text__tag' id='vzorova-hodina'>vzorová hodina</span>");
+                                        <?php if (has_tag('vzorovahodina') == true){
+                                           echo "<span id='phone-hide'>•</span><span class='excerpt__text__tag' id='vzorova-hodina'>vzorová hodina</span>";
                                         }
                                         ?>
                                     </div>
