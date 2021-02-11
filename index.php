@@ -34,10 +34,12 @@
                                     <?php the_post_thumbnail([300, 200]); ?>
                                 </div>
                                 <div class="excerpt__text">
+                                    <div class="excerpt__text__box">
+                                        <?php if(is_sticky()){
+                                            echo ('<img class="excerpt__text__box__pinned" src="' . get_theme_file_uri( 'assets/img/pin.svg') . '"alt="pinned post"/>');
+                                        } ?>
+                                    </div>
                                     <h2 class="excerpt__text__title"><?php the_title(); ?></h2>
-                                    <?php if(is_sticky()){
-                                        echo ('<img class="excerpt__text__pinned" src="' . get_theme_file_uri( 'assets/img/pin.svg') . '"alt="pinned post"/>');
-                                    } ?>
                                     <?php the_excerpt(); ?>
                                     <div class="excerpt__text__meta">
                                         <span class="excerpt__text__meta__date"><?php echo get_the_date(); ?></span>
