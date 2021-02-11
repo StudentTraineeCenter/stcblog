@@ -35,6 +35,7 @@
                                 </div>
                                 <div class="excerpt__text">
                                     <h2 class="excerpt__text__title"><?php the_title(); ?></h2>
+                                    <?php if(is_sticky()) echo("hellou"); ?>
                                     <?php the_excerpt(); ?>
                                     <div class="excerpt__text__meta">
                                         <span class="excerpt__text__meta__date"><?php echo get_the_date(); ?></span>
