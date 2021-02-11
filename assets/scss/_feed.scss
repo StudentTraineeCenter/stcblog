@@ -106,9 +106,9 @@
             height: 1.4rem;
             color: var(--black);
             position: relative;
-            // @include for-size("tablet") {
-            //   bottom: 200px;
-            // }
+            @include for-size("tablet") {
+              display: none;
+            }
           }
         }
 
