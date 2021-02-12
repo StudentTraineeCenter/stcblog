@@ -98,6 +98,20 @@
           }
         }
 
+        &__box {
+          width: 100%;
+          height: 0;
+          text-align: right;
+          &__pinned {
+            height: 1.4rem;
+            color: var(--black);
+            position: relative;
+            @include for-size("tablet") {
+              display: none;
+            }
+          }
+        }
+
         // style of tags in loop
         &__tag {
           font-size: 0.9rem;
