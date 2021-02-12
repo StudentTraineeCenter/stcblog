@@ -29,7 +29,7 @@ tasks:
       wp plugin install syntaxhighlighter --activate &&
       wp plugin install easy-table-of-contents --activate &&
       wp plugin install automatic-nbsp --activate &&
-      wp plugin install yet-another-related-posts-plugin --activate &&
+      #wp plugin install yet-another-related-posts-plugin --activate &&
       wp plugin install wp-external-links --activate &&
       wp import 9j500a.xml --authors=create
     command: apache2ctl start # start Apache server
