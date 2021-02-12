@@ -27,7 +27,7 @@ tasks:
       wp plugin install pixasplash-wordpress.zip --activate &&
       wp plugin install wordpress-importer --activate &&
       wp plugin install syntaxhighlighter --activate &&
-      wp plugin install easy-table-of-contents --activate
+      wp plugin install easy-table-of-contents --activate &&
       wp import 9j500a.xml --authors=create
     command: apache2ctl start # start Apache server
   
