@@ -26,4 +26,5 @@ Project is licensed under GNU GPLv3.
 (C) Ondrej Golasowski, Petr Kucera and [contributors](https://github.com/MicrosoftSTC/stcblog/graphs/contributors).
 
 ## Fabric UI changes
-Edited _Animation.Mixins.scss - @mixin ms-motion-scaleDownIn doesn't retain state - set to none.
+- [_Animation.Mixins.scss](https://github.com/MicrosoftSTC/stcblog/blob/63221c005b5d84a07a17b2a3bdeffef253cbe3a5/assets/scss/fabric/mixins/_Animation.Mixins.scss#L23-L30) - @mixin ms-motion-scaleDownIn doesn't retain state - set to none.
+- [_Animation.Mixins.MDL2.scss](https://github.com/MicrosoftSTC/stcblog/blob/63221c005b5d84a07a17b2a3bdeffef253cbe3a5/assets/scss/fabric/mixins/_Animation.Mixins.MDL2.scss#L177) - change from an unqoted argument to an unchanged one. (see [#61](https://github.com/MicrosoftSTC/stcblog/pull/61))
