@@ -54,7 +54,7 @@
                 </div>
             </section>
             <section class="feed__posts">
-                <h1>Články</h1>
+                <h2>Články</h2>
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                     <article>
                         <a class="excerpt" href="<?php the_permalink(); ?>">
