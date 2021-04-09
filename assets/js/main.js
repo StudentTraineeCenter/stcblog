@@ -14,7 +14,7 @@ const searchInputElement = document.getElementById("input_searchInput");
  */
 
 $(document).ready(() => {
-  console.log('Document is ready');
+  console.log(`Document is ready @ ${performance.now()}`);
   searchForm();
   menu();
   removeImageAttr();
@@ -23,7 +23,6 @@ $(document).ready(() => {
     backTopButton();
   };
   cookiesSetting();
-  makeIframeVisible();
 });
 
 const validateSearch = () => searchInputElement.value !== "";
