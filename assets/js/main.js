@@ -14,7 +14,7 @@ const searchInputElement = document.getElementById("input_searchInput");
  */
 
 $(document).ready(() => {
-  console.log(`Document is ready @ ${performance.now()}`);
+  console.log(`Document is ready @ ${performance.now()}ms`);
   searchForm();
   menu();
   removeImageAttr();
