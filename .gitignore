@@ -7,7 +7,6 @@ logs
 
 # Ignore IDE specific files
 .idea/
-.vscode/
 
 # Ignore MacOS DS_Stores
 **/.DS_Store
