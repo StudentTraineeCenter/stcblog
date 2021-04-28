@@ -1,0 +1,18 @@
+{
+    "liveSassCompile.settings.formats":[
+       {
+           "extensionName": ".css",
+           "format": "compressed",
+           "savePath": "/public_html/wp-content/themes/stcblog/"
+       }
+   ],
+   "liveSassCompile.settings.excludeList": [
+      "**/node_modules/**",
+      ".vscode/**"
+   ],
+   "liveSassCompile.settings.generateMap": true,
+   "liveSassCompile.settings.autoprefix": [
+       "> 1%",
+       "last 2 versions"
+   ]
+}
