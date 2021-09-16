@@ -20,6 +20,6 @@ function renderBanner() {
   let el = document.getElementById("header");
   el.insertAdjacentHTML(
     "afterend",
-    '<div class="campaign-banner"><p>Zdravíme, právě jsme spustili přihlášky do Microsoft STC. Zaregistruj se do 1. 11. 2021.</p><a href="https://aka.ms/stc2022" rel="noopener" target="_blank" ><button>Přidej se k nám!</button></a></div>'
+    '<div class="campaign-banner"><p>Zdravíme, právě jsme spustili přihlášky do Microsoft STC. Zaregistruj se do 1. 11. 2021.</p><a href="https://aka.ms/stc2022" rel="noopener" target="_blank" ><button>Přidej se k nám! <i class="ms-Icon ms-Icon--Forward" aria-hidden="true"></i></button></a></div>'
   );
 }
