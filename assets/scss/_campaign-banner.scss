@@ -1,22 +1,59 @@
 // = author styles =
-// Copyright (C) 2020 Irena Andraskova, Petr Kucera
+// Copyright (C) 2021 Anna Surovkova, Petr Kucera
 // ===============================================
-.campaign-banner{
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-    background-color: var(--msftyellow);
-    @include flexbox{
-        flex-direction: column;
-    }
-    p{
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-        color: var(--campaign-banner-black);
-        font-size: 1.4rem;
-        width: 90vw;
-        a{
-            color: var(--black);
-        }
-    }
+
+$banner-orange: #ffaf72;
+$banner-yellow: #ffde42;
+
+.campaign-banner {
+   width: 100%;
+   text-align: center;
+   text-decoration: none;
+   font-weight: 600;
+   background: linear-gradient(90deg, $banner-yellow 0%, $banner-orange 100%);
+   @include flexbox {
+      flex-direction: column;
+   }
+   p {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      color: var(--campaign-banner-black);
+      font-size: 1.2rem;
+      width: 90vw;
+      a {
+         color: var(--black);
+      }
+      @include for-size('tablet'){
+         margin-bottom: 1rem;
+      }
+   }
+   button {
+      position: absolute;
+      right: 20px;
+      outline: none;
+      border: none;
+      background-color: var(--white);
+      @include ms-depth-16;
+      padding: 0.4rem;
+      cursor: pointer;
+      top: 11.5rem;
+      font-weight: 600;
+
+      @include ms-motion-scaleDownIn;
+      transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+
+      @include for-size("tablet") {
+         position: relative;
+         right: 0;
+         top: 0;
+         margin-bottom: 2rem;
+      }
+      &:hover{
+         transform: scale(1.05);
+      }
+
+      i {
+         margin-left: 0.3rem;
+      }
+   }
 }
