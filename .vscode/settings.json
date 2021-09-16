@@ -3,7 +3,7 @@
        {
            "extensionName": ".css",
            "format": "compressed",
-           "savePath": "/public_html/wp-content/themes/stcblog/"
+           "savePath": "/"
        }
    ],
    "liveSassCompile.settings.excludeList": [
