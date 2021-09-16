@@ -5,7 +5,7 @@
  * @license GPL(GPLv3)
  */
 ?>
-<header class="header ms-depth-8">
+<header class="header ms-depth-8" id="header">
     <section class="header__main" id="section_header">
         <a class="header__main__stclogo" id="logo_stclogo" href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <img class="header__main__stclogo__std" src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/stclogo_std.svg"/>
