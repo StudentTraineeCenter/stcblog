@@ -46,6 +46,16 @@ function get_js_name() {
 }
 
 /**
+ * Attach a version suffix to the url of the campaign-banner.js to force browsers to refresh JS.
+ *
+ * @author Petr Kucera
+ */
+function get_js_campaign_banner_name() {
+   $version = 3;
+   return "/assets/js/campaign-banner.js?rnd=" . $version;
+}
+
+/**
  * Create multiple socials icons.
  *
  * @param int Count of icons.

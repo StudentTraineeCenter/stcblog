@@ -6,4 +6,4 @@
  */
 ?>
 
-<script src="<?php echo get_bloginfo('template_directory')?>/assets/js/campaign-banner.js"></script>
+<script src="<?php echo get_bloginfo('template_directory') . get_js_campaign_banner_name();?>"></script>
