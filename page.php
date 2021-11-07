@@ -14,6 +14,11 @@
         <?php wp_head(); ?>
     </head>
     <body class="ms-Fabric">
+
+    <?php if(is_page( 'adventni-kalendar' )){
+        include
+    }
+    ?>
         <?php get_header(); ?>
                
         <main class="main post">

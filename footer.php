@@ -30,8 +30,8 @@
         <?php endif; ?>
     </section>
 </footer>
-<?php include 'cookies-banner.php';?>
-<?php include 'cookies-notice.php';?>
+<?php include 'specific-pages/cookies-banner.php';?>
+<?php include 'specific-pages/cookies-notice.php';?>
 <?php include 'specific-pages/backgorund-animations.php';?>
 <?php wp_footer(); ?>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/jquery.min.js"></script>
