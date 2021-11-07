@@ -15,10 +15,6 @@
     </head>
     <body class="ms-Fabric">
 
-    <?php if(is_page( 'adventni-kalendar' )){
-        include
-    }
-    ?>
         <?php get_header(); ?>
                
         <main class="main post">
@@ -27,6 +23,10 @@
             </header> 
 
             <article class="post__content">
+                <?php if(is_page( 'adventni-kalendar' )){
+                        include 'specific-pages/advent.php';
+                    }
+                ?>
                 <?php the_content(); ?>
             </article>
         </main>
