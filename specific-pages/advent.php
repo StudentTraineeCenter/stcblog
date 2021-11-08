@@ -4,4 +4,6 @@
 <button>Pravidla a dalsi informace</button>
 </div>
 
+<div id="advent-calendar"></div>
+
 <h2>Pravidla</h2>
