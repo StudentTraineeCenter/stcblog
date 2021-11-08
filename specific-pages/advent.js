@@ -3,6 +3,8 @@
  * @param {*} id name of \<div\> block
  */
 function renderAdventCalendar(id) {
+  let width_a = [2, 7, 13, 17, 18, 24];
+  let height_a = [4, 12, 20, 24];
   for (let i = 1; i <= 24; i++) {
     let date = "2021-12-";
     if (i > 9) {
@@ -13,7 +15,7 @@ function renderAdventCalendar(id) {
     }
     console.log(date);
 
-    let pot = new Pot(2, 3, date);
+    let pot = new Pot(i, date);
     pot.constructPot(id);
   }
 }
@@ -33,15 +35,14 @@ function getStatusByDate(date) {
 }
 
 class Pot {
-  constructor(height, width, date) {
-    this.height = height;
-    this.width = width;
+  constructor(potId, date) {
+    this.potId = potId;
     this.date = date;
     this.status = getStatusByDate(date);
   }
 
   constructPot(id) {
-    let ret = `<div class="pot widht${this.width} height${this.height} ${this.status}"></div>`;
+    let ret = `<div class="pot pot${this.potId} ${this.status}">${this.potId}</div>`;
     document.getElementById(id).innerHTML += ret;
   }
 }
