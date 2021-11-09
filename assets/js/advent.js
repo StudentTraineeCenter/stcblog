@@ -36,6 +36,7 @@ function getImgLocation(potId) {
   let image_l = [1, 4, 8, 9, 10, 11, 12, 16, 17, 18, 24];
   if (image_l.includes(potId)) {
     if (potId < 10)
+    // ToDo: debug relative adress!
       return `<img class="advent-img" src="/assets/img/advent/0${potId}.png">`;
     return `<img class="advent-img" src="/assets/img/advent/${potId}.png"></img>`;
   }
