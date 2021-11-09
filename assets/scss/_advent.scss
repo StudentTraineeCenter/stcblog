@@ -39,7 +39,7 @@ $advent-back-dark: #c2266f;
    .pot {
       border-radius: 10px;
       margin: 0.3rem;
-      padding: 0.3rem;
+      padding: 1rem;
 
       @include ms-depth-8;
       cursor: pointer;
@@ -57,6 +57,12 @@ $advent-back-dark: #c2266f;
          font-size: 1.1rem;
          width: 100%;
          text-align: right;
+      }
+
+      .advent-img{
+         width: 90%;
+         height: 90%;
+         object-fit: contain;
       }
    }
    .pass {

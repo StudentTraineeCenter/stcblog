@@ -3,8 +3,6 @@
  * @param {*} id name of \<div\> block
  */
 function renderAdventCalendar(id) {
-  let width_a = [2, 7, 13, 17, 18, 24];
-  let height_a = [4, 12, 20, 24];
   for (let i = 1; i <= 24; i++) {
     let date = "2021-12-";
     if (i > 9) {
@@ -34,15 +32,27 @@ function getStatusByDate(date) {
   if (date_t.getDate() < now.getDate()) return "future";
 }
 
+function getImgLocation(potId) {
+  let image_l = [1, 4, 8, 9, 10, 11, 12, 16, 17, 18, 24];
+  if (image_l.includes(potId)) {
+    if (potId < 10)
+      return `<img class="advent-img" src="/assets/img/advent/0${potId}.png">`;
+    return `<img class="advent-img" src="/assets/img/advent/${potId}.png"></img>`;
+  }
+  return "";
+}
+
 class Pot {
   constructor(potId, date) {
     this.potId = potId;
     this.date = date;
     this.status = getStatusByDate(date);
+    this.imgHtml = getImgLocation(potId);
   }
 
   constructPot(id) {
-    let ret = `<div class="pot pot${this.potId} ${this.status}"><span>${this.potId}.</span></div>`;
+    // let ret = `<div class="pot pot${this.potId} ${this.status}">${this.imgHtml}</div>`;
+    let ret = `<div class="pot pot${this.potId} ${this.status}">${this.imgHtml}<span>${this.potId}.</span></div>`;
     document.getElementById(id).innerHTML += ret;
   }
 }
