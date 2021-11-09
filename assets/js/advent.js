@@ -42,7 +42,7 @@ class Pot {
   }
 
   constructPot(id) {
-    let ret = `<div class="pot pot${this.potId} ${this.status}">${this.potId}</div>`;
+    let ret = `<div class="pot pot${this.potId} ${this.status}"><span>${this.potId}.</span></div>`;
     document.getElementById(id).innerHTML += ret;
   }
 }

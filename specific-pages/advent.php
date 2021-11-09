@@ -6,4 +6,6 @@
 
 <div id="advent-calendar"></div>
 
+<script src="<?php echo get_bloginfo('template_directory');?>/assets/js/advent.js"></script>
+
 <h2>Pravidla</h2>
