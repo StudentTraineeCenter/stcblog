@@ -5,6 +5,7 @@
 </div>
 
 <div id="advent-calendar"></div>
+<div id="advent-background"><div id="snow"></div></div>
 
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/advent.js"></script>
 
