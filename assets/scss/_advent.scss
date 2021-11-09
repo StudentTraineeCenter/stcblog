@@ -14,6 +14,7 @@ $advent-back-dark: #c2266f;
    background-image: linear-gradient(to bottom right, $advent-back-light, $advent-back-dark);
    position: fixed;
    top: 0;
+   left: 0;
    z-index: -1;
    #snow {
       width: 100%;
