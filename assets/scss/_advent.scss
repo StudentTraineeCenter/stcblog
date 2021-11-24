@@ -28,6 +28,12 @@ $advent-back-dark: #c2266f;
    }
 }
 
+#white-background{
+   width: 100%;
+   // background: --var(white);
+   background: white;
+}
+
 #advent-calendar {
    width: 90vw;
    max-width: 1000px;
