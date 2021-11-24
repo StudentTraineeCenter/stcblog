@@ -4,6 +4,7 @@
 <button class="advent-botton">Pravidla a dalsi informace</button>
 </div>
 <div id="advent-calendar"></div>
+<div id="advent-border"></div>
 <div id="advent-background"><div id="snow"></div></div>
 <div id="advent-white-background"><div id="snow"></div></div>
 
