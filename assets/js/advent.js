@@ -53,7 +53,7 @@ class Pot {
 
   constructPot(id) {
     // let ret = `<div class="pot pot${this.potId} ${this.status}">${this.imgHtml}</div>`;
-    let ret = `<div class="pot pot${this.potId} ${this.status}">${this.imgHtml}<span>${this.potId}.</span></div>`;
+    let ret = `<div class="pot pot${this.potId} ${this.status}"><span class="invisible">${this.potId}.</span>${this.imgHtml}<span>${this.potId}.</span></div>`;
     document.getElementById(id).innerHTML += ret;
   }
 }
