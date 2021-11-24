@@ -19,3 +19,5 @@
    }
    @font-face {font-family:"Minecraft";src:url("<?php echo get_bloginfo('template_directory');?>/assets/fonts/minecraft/minecraft.eot?") format("eot"),url("<?php echo get_bloginfo('template_directory');?>/assets/fonts/minecraft/minecraft.woff") format("woff"),url("<?php echo get_bloginfo('template_directory');?>/assets/fonts/minecraft/minecraft.ttf") format("truetype"),url("<?php echo get_bloginfo('template_directory');?>/assets/fonts/minecraft/minecraft.svg#Minecraft") format("svg");font-weight:normal;font-style:normal;}
 </style>
+
+<a href="http://" target="_blank"></a>

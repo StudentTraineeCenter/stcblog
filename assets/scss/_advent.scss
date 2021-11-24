@@ -43,9 +43,9 @@ $advent-back-dark: #c2266f;
    }
 }
 
-.advent-center{
+.advent-center {
    width: 100%;
-   @include flexbox{
+   @include flexbox {
       flex-direction: column;
    }
 }
@@ -76,7 +76,7 @@ $advent-back-dark: #c2266f;
    opacity: 0.1;
 }
 
-#advent-border{
+#advent-border {
    margin-bottom: 5rem;
 }
 
@@ -98,8 +98,9 @@ $advent-back-dark: #c2266f;
       border-radius: 10px;
       padding: 1rem;
 
+      text-decoration: none;
+
       @include ms-depth-8;
-      cursor: pointer;
 
       justify-self: stretch;
       align-self: center;
@@ -109,18 +110,16 @@ $advent-back-dark: #c2266f;
          align-items: flex-end;
       }
 
-      @include ms-motion-scaleDownIn;
-      transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-
-      &:hover {
-         transform: scale(1.05);
-      }
-
       span {
          color: $advent-dark;
          font-size: 1.1rem;
          width: 100%;
          text-align: right;
+         text-decoration: none;
+         white-space: nowrap;
+      }
+      span.effect {
+         display: none;
       }
 
       .advent-img {
@@ -132,13 +131,28 @@ $advent-back-dark: #c2266f;
    }
    .pass {
       background-color: $advent-white;
+      cursor: pointer;
+      @include ms-motion-scaleDownIn;
+      transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+
+      &:hover {
+         transform: scale(1.05);
+      }
    }
    .today {
       background-color: $advent-white;
       border: 5px solid #f1dc61;
+      cursor: pointer;
+      @include ms-motion-scaleDownIn;
+      transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+
+      &:hover {
+         transform: scale(1.05);
+      }
    }
    .future {
       background-color: #dfdfdf;
+      pointer-events: none;
    }
    .pot1 {
       grid-row: 1;
