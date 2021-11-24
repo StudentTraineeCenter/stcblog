@@ -32,14 +32,14 @@ $advent-back-dark: #c2266f;
    width: 90vw;
    max-width: 1000px;
    display: grid;
-   // gap: 1rem;
+   gap: 1rem;
    grid-template-columns: repeat(6, 1fr);
    grid-auto-rows: auto;
    // background-color: pink;
 
    .pot {
       border-radius: 10px;
-      margin: 0.3rem;
+      // margin: 0.3rem;
       padding: 1rem;
 
       @include ms-depth-8;
@@ -64,6 +64,7 @@ $advent-back-dark: #c2266f;
          width: 90%;
          height: 90%;
          object-fit: contain;
+         display: none;
       }
    }
    .pass {
@@ -84,7 +85,7 @@ $advent-back-dark: #c2266f;
    .pot2 {
       grid-row: 1;
       grid-column: 2/4;
-      aspect-ratio: 2/1;
+      aspect-ratio: 2/0.95;
    }
    .pot3 {
       grid-row: 1;
@@ -94,7 +95,7 @@ $advent-back-dark: #c2266f;
    .pot4 {
       grid-row: 1/3;
       grid-column: 5;
-      aspect-ratio: 1/2;
+      aspect-ratio: 0.95/2;
    }
    .pot5 {
       grid-row: 1;
@@ -104,7 +105,7 @@ $advent-back-dark: #c2266f;
    .pot6 {
       grid-row: 2;
       grid-column: 1/3;
-      aspect-ratio: 2/1;
+      aspect-ratio: 2/0.95;
    }
    .pot7 {
       grid-row: 2;
@@ -129,12 +130,12 @@ $advent-back-dark: #c2266f;
    .pot11 {
       grid-row: 3/5;
       grid-column: 2;
-      aspect-ratio: 1/2;
+      aspect-ratio: 0.95/2;
    }
    .pot12 {
       grid-row: 3;
       grid-column: 3/5;
-      aspect-ratio: 2/1;
+      aspect-ratio: 2/0.95;
    }
    .pot13 {
       grid-row: 3;
@@ -159,17 +160,17 @@ $advent-back-dark: #c2266f;
    .pot17 {
       grid-row: 4/6;
       grid-column: 4;
-      aspect-ratio: 1/2;
+      aspect-ratio: 0.95/2;
    }
    .pot18 {
       grid-row: 4;
       grid-column: 5/7;
-      aspect-ratio: 2/1;
+      aspect-ratio: 2/0.95;
    }
    .pot19 {
       grid-row: 5;
       grid-column: 1/3;
-      aspect-ratio: 2/1;
+      aspect-ratio: 2/0.95;
    }
    .pot20 {
       grid-row: 5;
