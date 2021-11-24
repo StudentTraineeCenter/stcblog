@@ -5,15 +5,16 @@
 </div>
 <div id="advent-calendar"></div>
 <div id="advent-border"></div>
-<div id="advent-background"><div id="snow"></div></div>
-<div id="advent-white-background"><div id="snow"></div></div>
+<div id="advent-snow"></div>
+<div id="advent-background"></div>
+<div id="advent-white-background"></div>
 
 <script>
    let imgUrl = '<?php echo get_bloginfo('template_directory');?>/assets/img/advent/';
 </script>
 <script src="<?php echo get_bloginfo('template_directory');?>/assets/js/advent.js"></script>
 <style>
-   #advent-background #snow {
+   #advent-snow {
       background-image: url("<?php echo get_bloginfo('template_directory');?>/assets/img/background_snowflakes.svg");
    }
    @font-face {font-family:"Minecraft";src:url("<?php echo get_bloginfo('template_directory');?>/assets/fonts/minecraft/minecraft.eot?") format("eot"),url("<?php echo get_bloginfo('template_directory');?>/assets/fonts/minecraft/minecraft.woff") format("woff"),url("<?php echo get_bloginfo('template_directory');?>/assets/fonts/minecraft/minecraft.ttf") format("truetype"),url("<?php echo get_bloginfo('template_directory');?>/assets/fonts/minecraft/minecraft.svg#Minecraft") format("svg");font-weight:normal;font-style:normal;}
