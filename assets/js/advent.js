@@ -36,7 +36,7 @@ function getImgLocation(potId) {
   let image_l = [1, 4, 8, 9, 10, 11, 12, 16, 17, 18, 24];
   if (image_l.includes(potId)) {
     if (potId < 10)
-    // ToDo: debug relative adress!
+      // ToDo: debug relative adress!
       return `<img class="advent-img" src="${imgUrl}0${potId}.png">`;
     return `<img class="advent-img" src="${imgUrl}${potId}.png"></img>`;
   }
@@ -56,6 +56,11 @@ class Pot {
     let ret = `<div class="pot pot${this.potId} ${this.status}"><span class="invisible">${this.potId}.</span>${this.imgHtml}<span>${this.potId}.</span></div>`;
     document.getElementById(id).innerHTML += ret;
   }
+}
+
+function setHeightByElPosition(elementTag, cssTargetId){
+  let position = document.getElementById(elementTag).offsetTop;
+  document.getElementById(cssTargetId).style.height = position;
 }
 
 renderAdventCalendar("advent-calendar");
