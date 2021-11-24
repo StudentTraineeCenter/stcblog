@@ -15,14 +15,41 @@ $advent-back-dark: #c2266f;
 
 .main__header h1 {
    color: var(--white);
+   font-size: 3rem;
 }
 
 // end of changing the normal styles
 
-
-#advent-description {
+.advent-description {
    font-family: Minecraft;
+   color: var(--white);
 }
+
+.advent-botton {
+   background-image: linear-gradient(to left, $advent-back-light, $advent-back-dark);
+   border-radius: 2rem;
+   outline: none;
+   border: none;
+   cursor: pointer;
+   text-align: center;
+   margin: 1rem;
+   padding: 1rem;
+   color: var(--white);
+   @include ms-motion-scaleDownIn;
+   transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+
+   &:hover {
+      transform: scale(1.1);
+   }
+}
+
+.advent-center{
+   width: 100%;
+   @include flexbox{
+      flex-direction: column;
+   }
+}
+
 #advent-background {
    width: 100%;
    height: 100vh;
@@ -30,7 +57,7 @@ $advent-back-dark: #c2266f;
    position: fixed;
    top: 0;
    left: 0;
-   z-index: -1;
+   z-index: -2;
    #snow {
       width: 100%;
       height: 100%;
@@ -39,11 +66,11 @@ $advent-back-dark: #c2266f;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      opacity: 0.5;
+      opacity: 0.1;
    }
 }
 
-#white-background {
+#advent-white-background {
    width: 100%;
    // background: --var(white);
    background: white;
@@ -56,7 +83,8 @@ $advent-back-dark: #c2266f;
    gap: 1rem;
    grid-template-columns: repeat(6, 1fr);
    grid-auto-rows: auto;
-   // background-color: pink;
+   margin-top: 2rem;
+   margin-bottom: 2rem;
 
    .invisible {
       opacity: 0;
@@ -75,6 +103,13 @@ $advent-back-dark: #c2266f;
       @include flexbox {
          // flex-direction: column;
          align-items: flex-end;
+      }
+
+      @include ms-motion-scaleDownIn;
+      transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+
+      &:hover {
+         transform: scale(1.05);
       }
 
       span {

@@ -1,9 +1,11 @@
-<p id="advent-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta ullam numquam ad et adipisci ratione aut iste atque corrupti voluptatum, ipsam eos voluptas illum molestias quas explicabo, dolorum perferendis nulla!</p>
+<p class="advent-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta ullam numquam ad et adipisci ratione aut iste atque corrupti voluptatum, ipsam eos voluptas illum molestias quas explicabo, dolorum perferendis nulla!</p>
 
-<button>Pravidla a dalsi informace</button>
-
+<div class="advent-center">
+<button class="advent-botton">Pravidla a dalsi informace</button>
+</div>
 <div id="advent-calendar"></div>
 <div id="advent-background"><div id="snow"></div></div>
+<div id="advent-white-background"><div id="snow"></div></div>
 
 <script>
    let imgUrl = '<?php echo get_bloginfo('template_directory');?>/assets/img/advent/';
