@@ -8,6 +8,21 @@ $advent-white: #ffffff;
 $advent-back-light: #ea5658;
 $advent-back-dark: #c2266f;
 
+// start of changing the normal styles
+.post {
+   background: none;
+}
+
+.main__header h1 {
+   color: var(--white);
+}
+
+// end of changing the normal styles
+
+
+#advent-description {
+   font-family: Minecraft;
+}
 #advent-background {
    width: 100%;
    height: 100vh;
@@ -28,7 +43,7 @@ $advent-back-dark: #c2266f;
    }
 }
 
-#white-background{
+#white-background {
    width: 100%;
    // background: --var(white);
    background: white;
@@ -43,7 +58,7 @@ $advent-back-dark: #c2266f;
    grid-auto-rows: auto;
    // background-color: pink;
 
-   .invisible{
+   .invisible {
       opacity: 0;
    }
 
@@ -69,7 +84,7 @@ $advent-back-dark: #c2266f;
          text-align: right;
       }
 
-      .advent-img{
+      .advent-img {
          width: 70%;
          height: 90%;
          object-fit: contain;
