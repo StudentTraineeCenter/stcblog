@@ -1,4 +1,35 @@
+/**
+ * Advent event js function
+ * - render grid calendar
+ * - set background height
+ */
 
+links = [
+   "https://studuj.digital/adventni-kalendar/advent/",
+   "https://studuj.digital/adventni-kalendar/betlem/",
+   "https://studuj.digital/adventni-kalendar/betlemska-koleda/",
+   "https://studuj.digital/adventni-kalendar/svatek-sv-barbory/",
+   "https://studuj.digital/adventni-kalendar/svicky/",
+   "https://studuj.digital/adventni-kalendar/svatek-sv-mikulase/",
+   "https://studuj.digital/adventni-kalendar/vanoce-v-anglii-i/",
+   "https://studuj.digital/adventni-kalendar/vanoce-v-anglii-ii/",
+   "https://studuj.digital/adventni-kalendar/vanoce-v-japonsku-i/",
+   "https://studuj.digital/adventni-kalendar/vanoce-v-japonsku-ii/",
+   "https://studuj.digital/adventni-kalendar/origami/",
+   "https://studuj.digital/adventni-kalendar/vanocni-koledy/",
+   "https://studuj.digital/adventni-kalendar/svatek-sv-lucie/",
+   "https://studuj.digital/adventni-kalendar/vanoce-v-italii-i/",
+   "https://studuj.digital/adventni-kalendar/vanoce-v-italii-ii/",
+   "https://studuj.digital/adventni-kalendar/americke-vanoce/",
+   "https://studuj.digital/adventni-kalendar/zajimave-tradice-ve-svete/",
+   "https://studuj.digital/adventni-kalendar/baleni-darku/",
+   "https://studuj.digital/adventni-kalendar/5-vanocnich-klasik-ktere-musite-videt/",
+   "https://studuj.digital/adventni-kalendar/vanoce-na-filipinach-i/",
+   "https://studuj.digital/adventni-kalendar/vanoce-na-filipinach-ii/",
+   "https://studuj.digital/adventni-kalendar/vanocni-stromecek/",
+   "https://studuj.digital/adventni-kalendar/stedrovecerni-tabule/",
+   "https://studuj.digital/adventni-kalendar/stedry-den/",
+];
 let is_rendered = false;
 
 /**
@@ -46,8 +77,6 @@ function getImgLocation(potId) {
    return "";
 }
 
-links = ["https://studuj.digital/adventni-kalendar/advent/", "https://studuj.digital/adventni-kalendar/betlem/", "https://studuj.digital/adventni-kalendar/betlemska-koleda/", "https://studuj.digital/adventni-kalendar/svatek-sv-barbory/", "https://studuj.digital/adventni-kalendar/svicky/", "https://studuj.digital/adventni-kalendar/svatek-sv-mikulase/", "https://studuj.digital/adventni-kalendar/vanoce-v-anglii-i/", "https://studuj.digital/adventni-kalendar/vanoce-v-anglii-ii/", "https://studuj.digital/adventni-kalendar/vanoce-v-japonsku-i/", "https://studuj.digital/adventni-kalendar/vanoce-v-japonsku-ii/", "https://studuj.digital/adventni-kalendar/origami/", "https://studuj.digital/adventni-kalendar/vanocni-koledy/", "https://studuj.digital/adventni-kalendar/svatek-sv-lucie/", "https://studuj.digital/adventni-kalendar/vanoce-v-italii-i/", "https://studuj.digital/adventni-kalendar/vanoce-v-italii-ii/", "https://studuj.digital/adventni-kalendar/americke-vanoce/", "https://studuj.digital/adventni-kalendar/zajimave-tradice-ve-svete/", "https://studuj.digital/adventni-kalendar/baleni-darku/", "https://studuj.digital/adventni-kalendar/5-vanocnich-klasik-ktere-musite-videt/", "https://studuj.digital/adventni-kalendar/vanoce-na-filipinach-i/", "https://studuj.digital/adventni-kalendar/vanoce-na-filipinach-ii/", "https://studuj.digital/adventni-kalendar/vanocni-stromecek/", "https://studuj.digital/adventni-kalendar/stedrovecerni-tabule/", "https://studuj.digital/adventni-kalendar/stedry-den/"];
-
 class Pot {
    constructor(potId, date) {
       this.potId = potId;
@@ -70,7 +99,7 @@ class Pot {
 
 /**
  * Function wait for signal if calendar is rendered
- * @returns 
+ * @returns
  */
 function wait() {
    return new Promise(function (resolve, reject) {

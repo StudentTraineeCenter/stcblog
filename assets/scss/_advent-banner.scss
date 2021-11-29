@@ -1,3 +1,6 @@
+// = Advent-event banner styles =
+// Copyright (C) 2021 Petr Kucera
+// ===============================================
 .advent-banner {
    width: 100%;
    padding-right: 3rem;
@@ -7,7 +10,7 @@
       align-items: flex-end;
    }
 
-   @include for-size('tablet'){
+   @include for-size("tablet") {
       @include flexbox {
          flex-direction: column;
       }
@@ -21,7 +24,7 @@
       cursor: pointer;
       @include ms-motion-scaleDownIn;
       transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
-      
+
       &:hover {
          transform: scale(1.1);
       }

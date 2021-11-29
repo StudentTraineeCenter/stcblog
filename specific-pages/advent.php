@@ -1,3 +1,11 @@
+<?php
+
+/**
+ * Advent event page
+ * @copyright Copyright (C) 2021 Petr Kucera
+ * @license GPL(GPLv3)
+ */
+?>
 
 <p class="advent-description">Zkrať si s námi čekání na Ježíška a vyhraj odměny ze světa Minecraftu. 24 dní, 24 článků a 18 úkolů, to vše jsme si pro tebe připravili, tak neváhej a pust se do toho!</p>
 
