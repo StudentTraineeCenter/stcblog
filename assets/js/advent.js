@@ -1,3 +1,6 @@
+
+let is_rendered = false;
+
 /**
  * Function to create the grid.
  * @param {*} id name of \<div\> block
@@ -16,6 +19,7 @@ function renderAdventCalendar(id) {
       let pot = new Pot(i, date);
       pot.constructPot(id);
    }
+   is_rendered = true;
 }
 
 /**
@@ -64,14 +68,23 @@ class Pot {
    }
 }
 
-function sleep(ms) {
-   return new Promise(resolve => setTimeout(resolve, ms));
+/**
+ * Function wait for signal if calendar is rendered
+ * @returns 
+ */
+function wait() {
+   return new Promise(function (resolve, reject) {
+      (function waitForSignal() {
+         if (is_rendered) return resolve();
+         setTimeout(waitForSignal, 300);
+      })();
+   });
 }
 
 async function setHeightByElPosition(elementTag, cssTargetId) {
    let position = 0;
    let el = document.getElementById(elementTag);
-   await sleep(2000);
+   await wait();
    position = el.getBoundingClientRect().top + window.scrollY;
    console.log(position);
    document.getElementById(cssTargetId).style.height = position + "px";
