@@ -16,6 +16,11 @@
     <body class="ms-Fabric">
 
         <?php get_header(); ?>
+        <?php
+            if(is_subpage("adventni-kalendar")){
+               include 'specific-pages/advent-banner.php';
+            }
+        ?>
                
         <main class="main post">
             <header class="main__header post__header">
