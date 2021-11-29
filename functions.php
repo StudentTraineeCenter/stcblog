@@ -56,13 +56,32 @@ function get_js_campaign_banner_name() {
 }
 
 /**
- * Attach a version suffix to the url of the advent-banner.js to force browsers to refresh JS.
- *
+ * Return the page slag by ID
+ * 
  * @author Petr Kucera
  */
-function get_js_advent_banner_name() {
-   $version = 3;
-   return "/assets/js/advent-banner.js?rnd=" . $version;
+function get_id_by_slug($page_slug, $slug_page_type = 'page'){
+   $find_page = get_page_by_path($page_slug, OBJECT, $slug_page_type);
+   if ($find_page) {
+      return $find_page->ID;
+   } else {
+      return null;
+   }
+}
+
+/**
+ * Check if the page has mother function
+ * 
+ * @author Petr Kucera
+ */
+function is_subpage($page_name){
+   if(is_page($page_name)) return false;
+   $id = get_the_ID();
+   while(wp_get_post_parent_id($id) != 0){
+      $id = wp_get_post_parent_id($id);
+   }
+   if($id == get_id_by_slug($page_name)) return true;
+   return false;
 }
 
 /**
