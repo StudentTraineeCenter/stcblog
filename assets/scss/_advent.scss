@@ -13,6 +13,31 @@ $advent-back-dark: #c2266f;
    background: none;
 }
 
+.advent-content {
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6 {
+      color: $advent-dark;
+   }
+   a {
+      color: $advent-dark;
+   }
+   .wp-block-button__link {
+      background-image: linear-gradient(to left, $advent-back-light, $advent-back-dark);
+   }
+   .wp-block-buttons {
+      @include flexbox {
+         flex-direction: row;
+         @include for-size("tablet") {
+            flex-direction: column;
+         }
+      }
+   }
+}
+
 .advent-header h1 {
    color: var(--white);
    font-size: 3rem;

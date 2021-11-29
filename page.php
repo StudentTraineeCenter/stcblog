@@ -23,11 +23,11 @@
         ?>
                
         <main class="main post">
-            <header class="main__header post__header <?php if(is_page( 'adventni-kalendar' )) echo "advent-header";?>">
+            <header class="main__header post__header <?php if(is_page( 'adventni-kalendar' )) echo "advent-header";?> <?php if(is_subpage("adventni-kalendar")) echo "advent-content"; ?>">
                 <h1><?php the_post(); the_title(); ?></h1>
             </header> 
 
-            <article class="post__content">
+            <article class="post__content <?php if(is_subpage("adventni-kalendar")) echo "advent-content"; ?>">
                 <?php if(is_page( 'adventni-kalendar' )){
                         include 'specific-pages/advent.php';
                     }

@@ -1,6 +1,6 @@
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-   adventBanner("2021-12-01", "2021-12-25");
+   adventBanner("2021-11-01", "2021-12-25");
 });
 
 const headerEl = document.getElementById("header");
