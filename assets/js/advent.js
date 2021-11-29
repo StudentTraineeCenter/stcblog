@@ -14,7 +14,7 @@ function renderAdventCalendar(id) {
          date += "0";
          date += i.toString();
       }
-      console.log(date);
+      // console.log(date);
 
       let pot = new Pot(i, date);
       pot.constructPot(id);
@@ -76,7 +76,7 @@ function wait() {
    return new Promise(function (resolve, reject) {
       (function waitForSignal() {
          if (is_rendered) return resolve();
-         setTimeout(waitForSignal, 300);
+         setTimeout(waitForSignal, 2000);
       })();
    });
 }
