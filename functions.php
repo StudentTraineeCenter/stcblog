@@ -56,6 +56,16 @@ function get_js_campaign_banner_name() {
 }
 
 /**
+ * Attach a version suffix to the url of the advent-banner.js to force browsers to refresh JS.
+ *
+ * @author Petr Kucera
+ */
+function get_js_advent_banner_name() {
+   $version = 3;
+   return "/assets/js/advent-banner.js?rnd=" . $version;
+}
+
+/**
  * Create multiple socials icons.
  *
  * @param int Count of icons.
