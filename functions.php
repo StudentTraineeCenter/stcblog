@@ -31,7 +31,7 @@ add_theme_support('post-thumbnails');
  * @author Ondrej Golasowski
  */
 function get_css_name() {
-    $version = 34;
+    $version = 35;
     return "/style.css?rnd=" . $version;
 }
 
@@ -41,7 +41,7 @@ function get_css_name() {
  * @author Ondrej Golasowski
  */
 function get_js_name() {
-    $version = 3;
+    $version = 4;
     return "/assets/js/main.js?rnd=" . $version;
 }
 
@@ -51,7 +51,7 @@ function get_js_name() {
  * @author Petr Kucera
  */
 function get_js_campaign_banner_name() {
-   $version = 3;
+   $version = 4;
    return "/assets/js/campaign-banner.js?rnd=" . $version;
 }
 
