@@ -7,7 +7,7 @@
  */
 ?>
 
-<p class="advent-description">Zkrať si s námi čekání na Ježíška a vyhraj odměny ze světa Minecraftu. 24 dní, 24 článků a 18 úkolů, to vše jsme si pro tebe připravili, tak neváhej a pust se do toho!</p>
+<p class="advent-description">Zkrať si s námi čekání na Ježíška a&nbsp;vyhraj odměny ze&nbsp;světa Minecraftu. 24 dní, 24 článků a&nbsp;18 úkolů, to vše jsme si pro tebe připravili, tak neváhej a&nbsp;pusť se do toho!</p>
 
 <div class="advent-center">
 <a href="#rules"><button class="advent-botton">Pravidla a další informace</button></a>

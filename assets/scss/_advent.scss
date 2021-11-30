@@ -51,18 +51,20 @@ $advent-back-dark: #c2266f;
 }
 
 .advent-botton {
-   background-image: linear-gradient(to left, $advent-back-light, $advent-back-dark);
+   // background-image: linear-gradient(to left, $advent-back-light, $advent-back-dark);
+   background-color: var(--white);
    border-radius: 2rem;
    outline: none;
-   // border: 1px solid var(--white);
+   // border: 1px solid black;
    border: none;
+   // border-image: linear-gradient(to left, $advent-back-light, $advent-back-dark);
    @include ms-depth-16;
    text-transform: uppercase;
    cursor: pointer;
    text-align: center;
    margin: 1rem;
    padding: 1rem;
-   color: var(--white);
+   color: $advent-dark;
    @include ms-motion-scaleDownIn;
    transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
 
