@@ -31,6 +31,7 @@ $advent-back-dark: #c2266f;
    .wp-block-buttons {
       @include flexbox {
          flex-direction: row;
+         gap: 1rem;
          @include for-size("tablet") {
             flex-direction: column;
          }
