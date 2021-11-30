@@ -39,13 +39,7 @@ let isRendered = false;
 function renderAdventCalendar(id) {
    for (let i = 1; i <= 24; i++) {
       let date = "2021-12-";
-      if (i > 9) {
-         date += i.toString();
-      } else {
-         date += "0";
-         date += i.toString();
-      }
-      // console.log(date);
+      date += i.toString().padStart(2, '0');
 
       const pot = new Pot(i, date);
       pot.constructPot(id);
@@ -60,11 +54,11 @@ function renderAdventCalendar(id) {
  */
 function getStatusByDate(date) {
    const now = new Date();
-   const dataTo = new Date(date);
+   const dateTo = new Date(date);
 
-   if (dataTo.getDate() < now.getDate()) return "pass";
-   if (dataTo.getDate() === now.getDate()) return "today";
-   if (dataTo.getDate() > now.getDate()) return "future";
+   if (dateTo.getDate() < now.getDate()) return "pass";
+   if (dateTo.getDate() === now.getDate()) return "today";
+   if (dateTo.getDate() > now.getDate()) return "future";
 }
 
 function getImageLocation(potId) {
