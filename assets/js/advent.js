@@ -4,7 +4,7 @@
  * - set background height
  */
 
-links = [
+const links = [
    "https://studuj.digital/adventni-kalendar/advent/",
    "https://studuj.digital/adventni-kalendar/betlem/",
    "https://studuj.digital/adventni-kalendar/betlemska-koleda/",
@@ -30,7 +30,7 @@ links = [
    "https://studuj.digital/adventni-kalendar/stedrovecerni-tabule/",
    "https://studuj.digital/adventni-kalendar/stedry-den/",
 ];
-let is_rendered = false;
+let isRendered = false;
 
 /**
  * Function to create the grid.
@@ -47,29 +47,29 @@ function renderAdventCalendar(id) {
       }
       // console.log(date);
 
-      let pot = new Pot(i, date);
+      const pot = new Pot(i, date);
       pot.constructPot(id);
    }
-   is_rendered = true;
+   isRendered = true;
 }
 
 /**
  * Function return status by date.
- * @param {} date in format "YYYY-MM-DD"
+ * @param { Date } date in format "YYYY-MM-DD"
  * @returns "pass" or "today" or "future" status
  */
 function getStatusByDate(date) {
-   let now = new Date();
-   let date_t = new Date(date);
+   const now = new Date();
+   const dataTo = new Date(date);
 
-   if (date_t.getDate() < now.getDate()) return "pass";
-   if (date_t.getDate() == now.getDate()) return "today";
-   if (date_t.getDate() > now.getDate()) return "future";
+   if (dataTo.getDate() < now.getDate()) return "pass";
+   if (dataTo.getDate() === now.getDate()) return "today";
+   if (dataTo.getDate() > now.getDate()) return "future";
 }
 
-function getImgLocation(potId) {
-   let image_l = [1, 4, 8, 9, 10, 11, 12, 16, 17, 18, 24];
-   if (image_l.includes(potId)) {
+function getImageLocation(potId) {
+   const imageList = [1, 4, 8, 9, 10, 11, 12, 16, 17, 18, 24];
+   if (imageList.includes(potId)) {
       if (potId < 10)
          return `<img class="advent-img" src="${imgUrl}0${potId}.png">`;
       return `<img class="advent-img" src="${imgUrl}${potId}.png"></img>`;
@@ -82,7 +82,7 @@ class Pot {
       this.potId = potId;
       this.date = date;
       this.status = getStatusByDate(date);
-      this.imgHtml = getImgLocation(potId);
+      this.imgHtml = getImageLocation(potId);
       if (this.status != "future") {
          this.link = links[potId - 1];
       } else {
@@ -92,8 +92,8 @@ class Pot {
 
    constructPot(id) {
       // let ret = `<div class="pot pot${this.potId} ${this.status}">${this.imgHtml}</div>`;
-      let ret = `<a href="${this.link}" target="_blank" class="pot pot${this.potId} ${this.status}"><span class="invisible">${this.potId}.</span>${this.imgHtml}<span>${this.potId}.</span></a>`;
-      document.getElementById(id).innerHTML += ret;
+      const currentPot = `<a href="${this.link}" target="_blank" class="pot pot${this.potId} ${this.status}"><span class="invisible">${this.potId}.</span>${this.imgHtml}<span>${this.potId}.</span></a>`;
+      document.getElementById(id).innerHTML += currentPot;
    }
 }
 
@@ -102,9 +102,9 @@ class Pot {
  * @returns
  */
 function wait() {
-   return new Promise(function (resolve, reject) {
+   return new Promise(function (resolve, _reject) {
       (function waitForSignal() {
-         if (is_rendered) return resolve();
+         if (isRendered) return resolve();
          setTimeout(waitForSignal, 2000);
       })();
    });
@@ -112,11 +112,11 @@ function wait() {
 
 async function setHeightByElPosition(elementTag, cssTargetId) {
    let position = 0;
-   let el = document.getElementById(elementTag);
+   const el = document.getElementById(elementTag);
    await wait();
    position = el.getBoundingClientRect().top + window.scrollY;
    console.log(position);
-   document.getElementById(cssTargetId).style.height = position + "px";
+   document.getElementById(cssTargetId).style.height = `${position}px`;
 }
 
 setHeightByElPosition("advent-border", "advent-background");
