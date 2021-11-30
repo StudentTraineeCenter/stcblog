@@ -19,7 +19,7 @@
       const endDate = new Date(e_Date);
       const now = new Date();
 
-      if ((now < endDate) && (now > startDate)) {
+      if ((now <= endDate) && (now >= startDate)) {
          renderAdventBanner();
       }
    }
