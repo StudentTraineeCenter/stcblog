@@ -360,4 +360,19 @@ function disable_x_pingback($headers) {
 }
 add_filter('xmlrpc_enabled', '__return_false');
 
+
+/**
+ * Remove Gutenberg Block Library CSS from loading on the frontend
+ * 
+ * @author Petr Kucera
+ */
+function smartwp_remove_wp_block_library_css(){
+    if (is_front_page() || is_home()) {
+        wp_dequeue_style( 'wp-block-library' );
+        // wp_dequeue_style( 'wp-block-library-theme' );
+        // wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
+    }
+} 
+add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
+
 ?>
