@@ -376,4 +376,21 @@ function smartwp_remove_wp_block_library_css(){
 }
 add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
 
+/**
+ * Disable WordPress emojis
+ * 
+ * @author Matyáš Koc, Petr Kucera
+ */
+function disable_emojis() {
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('admin_print_scripts', 'print_emoji_detection_script');
+    remove_action('wp_print_styles', 'print_emoji_styles');
+    remove_filter('the_content_feed', 'wp_staticize_emoji');
+    remove_action('admin_print_styles', 'print_emoji_styles');
+    remove_filter('comment_text_rss', 'wp_staticize_emoji');
+    remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+    remove_filter('embed_head', 'print_emoji_detection_script');
+}
+add_action('init', 'disable_emojis');
+
 ?>
