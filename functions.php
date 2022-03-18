@@ -367,13 +367,13 @@ add_filter('xmlrpc_enabled', '__return_false');
  * @author Petr Kucera
  */
 function smartwp_remove_wp_block_library_css(){
+    // in singles and pages its solved by overwriting html :where(img) class attribute in _global.scss
     if (!is_single() && !is_page()) {
         wp_dequeue_style( 'wp-block-library' );
         // wp_dequeue_style( 'wp-block-library-theme' );
         // wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
     }
 }
-// Replaced by overwriting html :where(img) class attribute in _global.scss
-// add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
+add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
 
 ?>
