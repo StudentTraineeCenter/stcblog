@@ -31,7 +31,7 @@ add_theme_support('post-thumbnails');
  * @author Ondrej Golasowski
  */
 function get_css_name() {
-    $version = 35;
+    $version = 36;
     return "/style.css?rnd=" . $version;
 }
 
