@@ -220,6 +220,6 @@ a.effect {
 }
 
 // Overwriting an atribute from Gutenberg Block Library CSS
-html :where(img){
+html .feed__posts :where(img){
   max-width: none!important;
 }
