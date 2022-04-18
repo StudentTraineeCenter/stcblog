@@ -218,8 +218,3 @@ a.effect {
     display: none;
   }
 }
-
-// Overwriting an atribute from Gutenberg Block Library CSS
-html .feed__posts :where(img){
-  max-width: none!important;
-}
