@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  campaignBanner("2022-8-31", "2022-11-14", "2022-11-14");
+  campaignBanner("2022-9-13", "2022-11-14", "2022-11-14");
 });
 
 const headerEl = document.getElementById("header");
