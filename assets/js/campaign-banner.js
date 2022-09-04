@@ -37,7 +37,7 @@ function renderBanner() {
         Přidej&nbsp;se do&nbsp;<strong>14&nbsp;11.</strong> do&nbsp;komunity
         Micrsoft&nbsp;STC a&nbsp;jdi své&nbsp;kariéře naproti.
       </p>
-      <a href="TODO" rel="nooperner" target="_blank"
+      <a href="https://prihlaska.studentstc.cz/" rel="nooperner" target="_blank"
         ><button>Přihlásit se</button></a
       >
     </div>
@@ -65,7 +65,7 @@ function renderSuperBanner() {
         Přidej&nbsp;se do&nbsp;<strong>14&nbsp;11.</strong> do&nbsp;komunity
         Micrsoft&nbsp;STC a&nbsp;jdi své&nbsp;kariéře naproti.
       </p>
-      <a href="TODO" rel="nooperner" target="_blank"
+      <a href="https://prihlaska.studentstc.cz/" rel="nooperner" target="_blank"
         ><button>Přihlásit se</button></a
       >
     </div>`
