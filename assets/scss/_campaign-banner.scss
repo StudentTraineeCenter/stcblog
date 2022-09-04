@@ -1,9 +1,9 @@
 // = author styles =
-// Copyright (C) 2021 Anna Surovkova, Petr Kucera
+// Copyright (C) 2022 Vojtěch Volf, Petr Kucera
 // ===============================================
 
-$banner-orange: #ffaf72;
-$banner-yellow: #ffde42;
+$banner-pink: #ff6844;
+$banner-violet: #9e59e6;
 
 .campaign-banner {
    width: 100%;
@@ -16,25 +16,42 @@ $banner-yellow: #ffde42;
    text-align: center;
    text-decoration: none;
    font-weight: 600;
-   background: linear-gradient(90deg, $banner-yellow 0%, $banner-orange 100%);
-  
-   p {
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      color: var(--campaign-banner-black);
-      font-size: 1.2rem;
-      width: 90vw;
-      a {
-         color: var(--black);
+   background: linear-gradient(90deg, $banner-pink 0%, $banner-violet 100%);
+
+   @include for-size("campaign") {
+      flex-direction: column;
+   }
+
+   .campaign-tag {
+      height: 2.5rem;
+
+      @include ms-depth-16;
+
+      @include for-size("campaign") {
+         margin-top: 2rem;
+      }
+
+      @include ms-motion-scaleDownIn;
+      transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
+
+      &:hover {
+         transform: scale(1.05);
       }
    }
 
-   a {
-      margin-top: calc(0.4rem + 1em);
+   p {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      color: var(--white);
+      font-size: 1.2rem;
+      width: 80vw;
+      a {
+         color: var(--black);
+         margin-top: calc(0.4rem + 1em);
+      }
    }
 
    button {
-      margin-bottom: 2rem;
       outline: none;
       border: none;
       background-color: var(--white);
@@ -42,11 +59,16 @@ $banner-yellow: #ffde42;
       padding: 0.4rem;
       cursor: pointer;
       font-weight: 600;
+      border-radius: 3px;
 
       @include ms-motion-scaleDownIn;
       transition: $ms-motion-timing-decelerate $ms-motion-duration-4;
 
-      &:hover{
+      @include for-size("campaign") {
+         margin-bottom: 2rem;
+      }
+
+      &:hover {
          transform: scale(1.05);
       }
 
