@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  campaignBanner("2021-9-13", "2021-10-31", "2021-11-14");
+  campaignBanner("2022-8-31", "2022-11-14", "2022-11-14");
 });
 
 const headerEl = document.getElementById("header");
@@ -20,13 +20,54 @@ function campaignBanner(s_Date, sup_Date, e_Date) {
 function renderBanner() {
   headerEl.insertAdjacentHTML(
     "afterend",
-    '<div class="campaign-banner"><p>Zdravíme, právě jsme spustili přihlášky do Microsoft STC. Zaregistruj se do 31. 10. 2021.</p><a href="https://aka.ms/stc2022" rel="noopener" target="_blank" ><button>Přidej se k nám!</button></a></div>'
+    `
+    <div class="campaign-banner">
+      <a
+        href="https://www.instagram.com/microsoftstc/"
+        rel="nooperner"
+        target="_blank"
+      >
+        <img
+          src="/assets/img/kampan-2022.svg"
+          class="campaign-tag"
+          alt="Campaign tag #STC2023"
+        />
+      </a>
+      <p>
+        Přidej&nbsp;se do&nbsp;<strong>14&nbsp;11.</strong> do&nbsp;komunity
+        Micrsoft&nbsp;STC a&nbsp;jdi své&nbsp;kariéře naproti.
+      </p>
+      <a href="TODO" rel="nooperner" target="_blank"
+        ><button>Přihlásit se</button></a
+      >
+    </div>
+    `
   );
 }
 
 function renderSuperBanner() {
   headerEl.insertAdjacentHTML(
     "afterend",
-    '<div class="campaign-banner"><p>Zdravíme, právě jsme spustili přihlášky do Microsoft STC. Zaregistruj se do 14. 11. 2021.</p><a href="https://aka.ms/stc2022" rel="noopener" target="_blank" ><button>Přidej se k nám!</button></a></div>'
+    `
+    <div class="campaign-banner">
+      <a
+        href="https://www.instagram.com/microsoftstc/"
+        rel="nooperner"
+        target="_blank"
+      >
+        <img
+          src="/assets/img/kampan-2022.svg"
+          class="campaign-tag"
+          alt="Campaign tag #STC2023"
+        />
+      </a>
+      <p>
+        Přidej&nbsp;se do&nbsp;<strong>14&nbsp;11.</strong> do&nbsp;komunity
+        Micrsoft&nbsp;STC a&nbsp;jdi své&nbsp;kariéře naproti.
+      </p>
+      <a href="TODO" rel="nooperner" target="_blank"
+        ><button>Přihlásit se</button></a
+      >
+    </div>`
   );
 }
