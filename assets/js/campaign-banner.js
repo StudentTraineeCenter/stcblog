@@ -39,7 +39,7 @@ function renderBanner() {
         Microsoft&nbsp;STC a&nbsp;jdi své&nbsp;kariéře naproti.
       </p>
       <a href="TODO" rel="nooperner" target="_blank"
-        ><button>Přihlásit se <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="40" height="15" viewBox="-15 0 24 20" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        ><button>Přihlásit se <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="40" height="14" viewBox="-14 0 24 20" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
         <line x1="5" y1="12" x2="19" y2="12" />
         <line x1="13" y1="18" x2="19" y2="12" />
