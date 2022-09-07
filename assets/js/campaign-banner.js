@@ -71,6 +71,7 @@ function renderSuperBanner() {
         Přidej&nbsp;se do&nbsp;<strong>14&nbsp;11.</strong> do&nbsp;komunity
         Microsoft&nbsp;STC a&nbsp;jdi své&nbsp;kariéře naproti.
       </p>
+<<<<<<< HEAD
       <a href="TODO" rel="nooperner" target="_blank"
         ><button>Přihlásit se <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -78,6 +79,10 @@ function renderSuperBanner() {
         <line x1="13" y1="18" x2="19" y2="12" />
         <line x1="13" y1="6" x2="19" y2="12" />
         </svg></button></a
+=======
+      <a href="https://prihlaska.studentstc.cz/" rel="nooperner" target="_blank"
+        ><button>Přihlásit se</button></a
+>>>>>>> 875bab10e605c6c25c2e24037fabeec7a32765d4
       >
     </div>`
     );
