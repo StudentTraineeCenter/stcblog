@@ -6,7 +6,7 @@
  * @license GPL(GPLv3)
  */
 ?>
-
+<!-- 
 <script>
    document.addEventListener("DOMContentLoaded", () => {
       adventBanner("2021-12-01", "2021-12-25");
@@ -30,4 +30,4 @@
          '<a href="https://studuj.digital/adventni-kalendar/" target="_blank" class="advent-banner"><img src="<?php echo get_bloginfo('template_directory'); ?>/assets/img/advent_banner.svg"></a>'
       );
    }
-</script>
+</script> -->
