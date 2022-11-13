@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  campaignBanner("2022-9-12", "2022-11-13", "2022-11-13");
+  campaignBanner("2022-9-12", "2022-11-14", "2022-11-20");
 });
 
 const headerEl = document.getElementById("header");
@@ -69,7 +69,7 @@ function renderSuperBanner() {
       />
     </a>
     <p>
-      Přidej&nbsp;se do&nbsp;<strong>14.&nbsp;11.</strong> do&nbsp;komunity
+      Přidej&nbsp;se do&nbsp;<strong>20.&nbsp;11.</strong> do&nbsp;komunity
       Microsoft&nbsp;STC a&nbsp;jdi své&nbsp;kariéře naproti.
     </p>
     <a href="https://prihlaska.studentstc.cz/" rel="nooperner" target="_blank"
