@@ -28,6 +28,12 @@
         <?php if(esc_url(get_theme_mod('settings_footer_logo3')) != "") :  ?>
             <a class="footer__socials__icon" href=<?php echo esc_url(get_theme_mod('settings_footer_link3'))?>><img src=<?php echo esc_url(get_theme_mod('settings_footer_logo3'))?> alt=""/></a>
         <?php endif; ?>
+        <?php if(esc_url(get_theme_mod('settings_footer_logo4')) != "") :  ?>
+            <a class="footer__socials__icon" href=<?php echo esc_url(get_theme_mod('settings_footer_link4'))?>><img src=<?php echo esc_url(get_theme_mod('settings_footer_logo4'))?> alt=""/></a>
+        <?php endif; ?>
+        <?php if(esc_url(get_theme_mod('settings_footer_logo5')) != "") :  ?>
+            <a class="footer__socials__icon" href=<?php echo esc_url(get_theme_mod('settings_footer_link5'))?>><img src=<?php echo esc_url(get_theme_mod('settings_footer_logo5'))?> alt=""/></a>
+        <?php endif; ?>
     </section>
 </footer>
 <?php if(!is_page( 'adventni-kalendar' )){
