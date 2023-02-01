@@ -7,7 +7,7 @@
 ?>
 <footer class="footer">
     <section class="footer__info">
-        <?php echo "&#169; " . date("Y") . get_theme_mod('settings_footer_copyright', '');?>
+        <?php echo "&#169; 2019 - " . date("Y") . get_theme_mod('settings_footer_copyright', '');?>
         <?php if(get_theme_mod('settings_footer_gdpr_text', '') != "" && get_theme_mod('settings_footer_gdpr_link', '') != "") :?>
             <p class="delimiter">·</p>
             <a href="<?php echo get_theme_mod('settings_footer_gdpr_link', '');?>"><?php echo get_theme_mod('settings_footer_gdpr_text', '');?></a>
