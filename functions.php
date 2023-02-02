@@ -213,7 +213,7 @@ function stcblog_customize_register($wp_customize) {
     // ===================================
     // Custom socials icons
     // ===================================
-    stcblog_add_socials(3, $wp_customize);
+    stcblog_add_socials(5, $wp_customize);
 }
 
 add_action('customize_register', 'stcblog_customize_register');
