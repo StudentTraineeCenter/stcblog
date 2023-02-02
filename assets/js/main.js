@@ -14,7 +14,7 @@ const searchInputElement = document.getElementById("input_searchInput");
  */
 
 $(document).ready(() => {
-  console.log('Document is ready');
+  console.log(`Document is ready @ ${performance.now()}ms`);
   searchForm();
   menu();
   removeImageAttr();
@@ -22,8 +22,6 @@ $(document).ready(() => {
   window.onscroll = () => {
     backTopButton();
   };
-  cookiesSetting();
-  makeIframeVisible();
 });
 
 const validateSearch = () => searchInputElement.value !== "";
@@ -110,13 +108,3 @@ function addTOCIcon() {
   $(".ez-toc-icon-toggle").addClass("ms-Icon ms-Icon--ContextMenu");
 }
 
-function cookiesSetting() {
-  $("#cookies-notice-settings-triger").on("click", () => {
-    $("#cookies-notice-settings").addClass("cookies-active");
-    $("#cookies-notice-settings").removeClass("cookies-deactive");
-  });
-  $(".cookies-setting-close").on("click", () => {
-    $("#cookies-notice-settings").removeClass("cookies-active");
-    $("#cookies-notice-settings").addClass("cookies-deactive");
-  });
-}

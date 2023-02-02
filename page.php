@@ -14,14 +14,24 @@
         <?php wp_head(); ?>
     </head>
     <body class="ms-Fabric">
+
         <?php get_header(); ?>
+        <?php
+            if(is_subpage("adventni-kalendar")){
+               include 'specific-pages/advent-banner.php';
+            }
+        ?>
                
         <main class="main post">
-            <header class="main__header post__header">
+            <header class="main__header post__header <?php if(is_page( 'adventni-kalendar' )) echo "advent-header";?> <?php if(is_subpage("adventni-kalendar")) echo "advent-content"; ?>">
                 <h1><?php the_post(); the_title(); ?></h1>
             </header> 
 
-            <article class="post__content">
+            <article class="post__content <?php if(is_subpage("adventni-kalendar")) echo "advent-content"; ?> <?php if(is_page( 'adventni-kalendar' )) echo "advent-content";?>">
+                <?php if(is_page( 'adventni-kalendar' )){
+                        include 'specific-pages/advent.php';
+                    }
+                ?>
                 <?php the_content(); ?>
             </article>
         </main>

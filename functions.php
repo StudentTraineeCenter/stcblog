@@ -31,7 +31,7 @@ add_theme_support('post-thumbnails');
  * @author Ondrej Golasowski
  */
 function get_css_name() {
-    $version = 34;
+    $version = 36;
     return "/style.css?rnd=" . $version;
 }
 
@@ -41,8 +41,47 @@ function get_css_name() {
  * @author Ondrej Golasowski
  */
 function get_js_name() {
-    $version = 3;
+    $version = 4;
     return "/assets/js/main.js?rnd=" . $version;
+}
+
+/**
+ * Attach a version suffix to the url of the campaign-banner.js to force browsers to refresh JS.
+ *
+ * @author Petr Kucera
+ */
+function get_js_campaign_banner_name() {
+   $version = 4;
+   return "/assets/js/campaign-banner.js?rnd=" . $version;
+}
+
+/**
+ * Return the page slag by ID
+ * 
+ * @author Petr Kucera
+ */
+function get_id_by_slug($page_slug, $slug_page_type = 'page'){
+   $find_page = get_page_by_path($page_slug, OBJECT, $slug_page_type);
+   if ($find_page) {
+      return $find_page->ID;
+   } else {
+      return null;
+   }
+}
+
+/**
+ * Check if the page has mother function
+ * 
+ * @author Petr Kucera
+ */
+function is_subpage($page_name){
+   if(is_page($page_name)) return false;
+   $id = get_the_ID();
+   while(wp_get_post_parent_id($id) != 0){
+      $id = wp_get_post_parent_id($id);
+   }
+   if($id == get_id_by_slug($page_name)) return true;
+   return false;
 }
 
 /**
@@ -151,7 +190,7 @@ function stcblog_customize_register($wp_customize) {
     // ===================================
     // Adding the template setting.
     $wp_customize->add_setting('settings_footer_copyright', [
-        'default' => '© ' . date("Y") . ' STC, Všechna práva vyhrazena'
+        'default' => ' STC, Všechna práva vyhrazena'
     ]);
 
     //Adding a control to the Customizer.
@@ -174,7 +213,7 @@ function stcblog_customize_register($wp_customize) {
     // ===================================
     // Custom socials icons
     // ===================================
-    stcblog_add_socials(3, $wp_customize);
+    stcblog_add_socials(5, $wp_customize);
 }
 
 add_action('customize_register', 'stcblog_customize_register');
@@ -211,54 +250,7 @@ function reading_time() {
     return $totalreadingtime;
 }
 
-/**
- * Exporting posts to csv file
- *
- * @author Petr Kučera
- */
-/*
-add_action( 'manage_posts_extra_tablenav', 'admin_post_list_top_export_button', 20, 1 );
-function admin_post_list_top_export_button( $which ) {
-    global $typenow;
- 
-    if ( 'post' === $typenow && 'top' === $which ) {
-        ?>
-        <input type="submit" name="export_all_posts" id="export_all_posts" class="button button-primary" value="Exportovat do csv" />
-        <?php
-    }
-}
-add_action( 'init', 'func_export_all_posts' );
-function func_export_all_posts() {
-    if(isset($_GET['export_all_posts'])) {
-        $arg = array(
-                'post_type' => 'post',
-                'post_status' => 'publish',
-                'posts_per_page' => -1,
-            );
- 
-        global $post;
-        $arr_post = get_posts($arg);
-        if ($arr_post) {
- 
-            header('Content-type: text/csv');
-            header('Content-Disposition: attachment; filename="wp.csv"');
-            header('Pragma: no-cache');
-            header('Expires: 0');
- 
-            $file = fopen('php://output', 'w');
- 
-            fputcsv($file, array('Post Title', 'URL'));
- 
-            foreach ($arr_post as $post) {
-                setup_postdata($post);
-                fputcsv($file, array(get_the_title(), get_the_permalink()));
-            }
- 
-            exit();
-        }
-    }
-}
-*/
+
 /**
  * Remove core update notifications for common users
  *
@@ -367,5 +359,38 @@ function disable_x_pingback($headers) {
     return $headers;
 }
 add_filter('xmlrpc_enabled', '__return_false');
+
+
+/**
+ * Remove Gutenberg Block Library CSS from loading on the frontend
+ * 
+ * @author Petr Kucera
+ */
+function smartwp_remove_wp_block_library_css(){
+    // in singles and pages its solved by overwriting html :where(img) class attribute in _global.scss
+    if (!is_single() && !is_page()) {
+        wp_dequeue_style( 'wp-block-library' );
+        // wp_dequeue_style( 'wp-block-library-theme' );
+        // wp_dequeue_style( 'wc-blocks-style' ); // Remove WooCommerce block CSS
+    }
+}
+add_action( 'wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css', 100 );
+
+/**
+ * Disable WordPress emojis
+ * 
+ * @author Matyáš Koc, Petr Kucera
+ */
+function disable_emojis() {
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('admin_print_scripts', 'print_emoji_detection_script');
+    remove_action('wp_print_styles', 'print_emoji_styles');
+    remove_filter('the_content_feed', 'wp_staticize_emoji');
+    remove_action('admin_print_styles', 'print_emoji_styles');
+    remove_filter('comment_text_rss', 'wp_staticize_emoji');
+    remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+    remove_filter('embed_head', 'print_emoji_detection_script');
+}
+add_action('init', 'disable_emojis');
 
 ?>

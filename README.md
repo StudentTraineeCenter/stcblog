@@ -1,5 +1,5 @@
 # STCblog Wordpress theme
-[![Build status](https://dev.azure.com/microsoftstc/stcblog/_apis/build/status/stcblog-deployment)](https://dev.azure.com/microsoftstc/stcblog/_build/latest?definitionId=2)
+[![Build Status](https://dev.azure.com/microsoftstc/stcblog/_apis/build/status/template-deployment?branchName=main)](https://dev.azure.com/microsoftstc/stcblog/_build/latest?definitionId=7&branchName=main)
 ![CodeQL](https://github.com/MicrosoftSTC/stcblog/workflows/CodeQL/badge.svg)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 

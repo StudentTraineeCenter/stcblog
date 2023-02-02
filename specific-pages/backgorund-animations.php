@@ -6,6 +6,7 @@
  * @license GPL(GPLv3)
  */
 
+/*
 date_default_timezone_set('Europe/Prague');
 
 $endDate = strtotime("January 1 2021 4AM");
@@ -21,8 +22,10 @@ if ($diff > 43200) {
         <canvas id="canvas"></canvas>
     ';
 }
-
+*/
 ?>
+
+<canvas id="canvas"></canvas>
 
 <style>
   /* body {
@@ -45,7 +48,7 @@ if ($diff > 43200) {
     }
   }
 </style>
-
+<!--
 <script src="https://cdn.jsdelivr.net/npm/fireworks-canvas@2.5.0/fireworks.min.js"> </script>
 
 <script>
@@ -67,3 +70,4 @@ if ($diff > 43200) {
 
   ffxinit(Fireworks, document.getElementById("container"));
 </script>
+!-->

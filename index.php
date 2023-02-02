@@ -16,7 +16,8 @@
     </head>
     <body class="ms-Fabric">
         <?php get_header(); ?>
-        <?php include 'campaign-banner.php';?>
+        <?php include 'specific-pages/campaign-banner.php';?>
+        <?php include 'specific-pages/advent-banner.php';?>
         <main class="main feed">
             <header class="main__header">
                 <h1><?php echo get_bloginfo('name'); ?></h1>

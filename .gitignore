@@ -1,0 +1,12 @@
+# Ignore Logs
+logs
+*.log
+
+# The files containing environment variables
+.env
+
+# Ignore IDE specific files
+.idea/
+
+# Ignore MacOS DS_Stores
+**/.DS_Store
