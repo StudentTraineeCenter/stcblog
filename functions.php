@@ -393,4 +393,24 @@ function disable_emojis() {
 }
 add_action('init', 'disable_emojis');
 
+
+/**
+ * Disable Chromium feature that applies `contain-intrinsic-size` to images with 
+ * `sizes="auto"` attribute. This prevents unexpected layout shifts caused by 
+ * missing `width` and `height` attributes.
+ *
+ * WordPress 6.7 introduced a feature that automatically adds `loading="lazy"`
+ * to images without validating the presence of these attributes. This behavior
+ * can cause rendering issues, especially in Chromium-based browsers, due to 
+ * their CSS adjustments for such images. 
+ * 
+ * Applying this filter disables the `auto-sizes` feature in WordPress until 
+ * a permanent patch is released (scheduled for version 6.7.1).
+ *
+ * @link https://core.trac.wordpress.org/ticket/62413
+ * @link https://ericportis.com/posts/2023/auto-sizes-pretty-much-requires-width-and-height/
+ * @author Petr Kucera
+ */
+add_filter('wp_img_tag_add_auto_sizes', '__return_false');
+
 ?>

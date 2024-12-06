@@ -8,6 +8,12 @@ Wordpress theme of the STC blog [studuj.digital](https://studuj.digital/).
 ## About project
 Based on [STCblog template](https://github.com/andreondra/stcblog).
 
+## Local development
+
+```sh
+docker-compose -p stcblog up --build # Build and run dev version in docker image
+```
+
 ## Features
 ### Responsive
 ![responsivity showcase](docs/img/readme1.gif)
